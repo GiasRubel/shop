@@ -42,5 +42,21 @@ class Adminlogin
 			}
 		}
 	}
+
+
+	public function adminLogout($adminName)
+	{
+		session_unset($adminName);
+	}
+
+
+
+
+
+
+
+
+
+
+
 }
-?>

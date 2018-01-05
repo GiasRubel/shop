@@ -1,6 +1,14 @@
 <?php 
 include '../lib/session.php';
 Session::checksession();
+// include '../classes/adminlogin.php';
+?>
+
+<?php
+if(isset($_GET['action']))
+{
+    session::destroy();
+}
 ?>
 <?php
   header("Cache-Control: no-cache, must-revalidate");
@@ -8,6 +16,8 @@ Session::checksession();
   header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); 
   header("Cache-Control: max-age=2592000");
 ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,12 +51,7 @@ Session::checksession();
 
 </head>
 <body>
-        <?php
-        if(isset($_GET['action']) && $_GET['action'] == "logout")
-        {
-            Session::destroy();
-        }
-        ?>
+        
     <div class="container_12">
         <div class="grid_12 header-repeat">
             <div id="branding">

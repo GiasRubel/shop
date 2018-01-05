@@ -101,10 +101,11 @@ class User
 			return $result;
 	}
 
-	public function destroy()
+	// 
+	public function userLogout($uId)
 	{
-		 session_destroy();
-  header("Location:index.php");
+		session_unset($uId);
+		// Session_destroy();
 	}
 
 

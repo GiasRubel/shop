@@ -81,8 +81,10 @@ $odr  = new Order();
 			      </div>
 			      <?php 
 			      	if (isset($_GET['usid'])) {
+
+			      		$uId = $_GET['usid'];
 			      		$ct->deleteAllItem();
-			      		$usr->destroy();
+			      		session::destroy();
 			      		
 			      	}
 			      ?>
